@@ -1,0 +1,77 @@
+%Program to generate the unit sample sequence u[n] Program 
+clc;
+n=-10:20; 
+u=[zeros(1,10) 1 zeros(1,20)]; 
+stem(n,u); 
+xlabel('Time index n'); 
+ylabel('Amplitude'); 
+title('Unit Sample Sequence'); 
+axis([-10 20 0 1.2]); 
+
+% Progrm to generte unit delayed sample sequence ud[n] with a delay of 11 samples.
+clf; 
+n = -10:20; 
+u = [zeros(1,21) 1 zeros(1,9)]; 
+stem(n,u); 
+xlabel('Time index n');
+ylabel('Amplitude'); 
+title('DELAYED UNIT SAMPLE SEQUENCE'); 
+axis([-10 20 0 1.2]); 
+%Progrm to generate a unit step sequences[n]
+clc; 
+n = -10:20; 
+s = [zeros(1,10) ones(1,21)]; 
+stem(n,s); 
+xlabel('Time index n');
+ylabel('Amplitude'); 
+title('Unit Step Sequence'); 
+axis([-10 20 0 1.2]); 
+
+% program to generate a delayed unit step sequence with an advance of 7 samples  
+clf; 
+n = -10:20; 
+sd = [zeros(1,3) ones(1,28)]; 
+stem(n,sd); 
+xlabel('Time index n');
+ylabel('Amplitude'); 
+title('Advanced Unit Step Sequence'); 
+axis([-10 20 0 1.2]); 
+
+%Program to generate complex valued exponential sequence 
+clf; 
+c = -(1/12)+(pi/6)*i; 
+K = 2; 
+n = 0:40; 
+x = K*exp(c*n); 
+subplot(2,1,1); 
+stem(n,real(x)); 
+xlabel('Time index n');
+ylabel('Amplitude'); 
+title('Real part'); 
+subplot(2,1,2); 
+stem(n,imag(x)); 
+xlabel('Time index n');
+ylabel('Amplitude'); 
+title('Imaginary part'); 
+
+%program to generate sinusoidal sequence
+n = 0:40; 
+f = 0.1; 
+phase = 0; 
+A = 1.5; 
+arg = 2*pi*f*n - phase; 
+x = A*cos(arg); 
+clf;  
+stem(n,x);  
+axis([0 40 -2 2]); 
+grid; 
+title('Sinusoidal Sequence'); 
+xlabel('Time index n'); 
+ylabel('Amplitude'); 
+axis; 
+ 
+ 
+ 
+ 
+ 
+ 
